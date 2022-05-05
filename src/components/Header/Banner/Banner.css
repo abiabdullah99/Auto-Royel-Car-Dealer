@@ -3,8 +3,6 @@
   align-items: center;
 }
 .banner-details {
-  background-size: cover;
-  background-position: left;
   z-index: -1;
   flex: 1;
 }

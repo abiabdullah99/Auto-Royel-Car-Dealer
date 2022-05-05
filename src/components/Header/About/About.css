@@ -1,5 +1,5 @@
-section{
-    background-color: #2C373D;
+section {
+  background-color: #2c373d;
 }
 .about-container {
   display: flex;
@@ -9,23 +9,24 @@ section{
   justify-content: space-between;
   padding-top: 100px;
 }
-.about-details{
-    flex: 1;
-    margin-left: 100px;
+.about-details {
+  flex: 1;
+  margin-left: 100px;
 }
-.about-image{
-    flex: 1;
-    margin-right: 30px;
+.about-image {
+  flex: 1;
+  margin-right: 30px;
 }
-.about-image img{
-    width: 100%;
+.about-image img {
+  width: 100%;
 }
 
-@media screen and (max-width:688px) {
-    .about-container{
-        flex-direction: column;
-    }
-    .about-details{
-        margin-left: 20px;
-    }
+@media screen and (max-width: 688px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-details {
+    margin-left: 20px;
+    margin-bottom: 50px;
+  }
 }

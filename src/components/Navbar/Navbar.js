@@ -4,8 +4,13 @@ import { ImCross } from "react-icons/im";
 import { TiThMenuOutline } from "react-icons/ti";
 import { GiCarWheel } from "react-icons/gi";
 import './Navbar.css'
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
 const Navbar = () => {
+
   const [open, setOpen] = useState(false);
+  const [user] = useAuthState(auth);
   return (
     <div>
  
@@ -54,12 +59,20 @@ const Navbar = () => {
               Contact
             </NavLink>
 
-            <NavLink
-              className={({ isActive }) => (isActive ? "active-link" : "link")}
-              to="/login"
-            >
-              LogIn
-            </NavLink>
+            {user ? (
+              <button className="singupBtn" onClick={() => signOut(auth)}>
+                Log Out
+              </button>
+            ) : (
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "active-link" : "link"
+                }
+                to="/login"
+              >
+                LogIn
+              </NavLink>
+            )}
           </div>
         </div>
       </div>
