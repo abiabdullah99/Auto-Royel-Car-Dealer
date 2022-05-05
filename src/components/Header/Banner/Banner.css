@@ -34,3 +34,19 @@ span{
     font-size: 20px;
     border-radius: 30px;
 }
+
+@media screen and (max-width:688px) {
+    .banner-container{
+        flex-direction: column;
+    }
+    .banner-details{
+        margin: 100px 0px;
+    }
+    .silde{
+        width: 100%;
+    }
+    .banner-image{
+        width: 90%;
+        margin: auto;
+    }
+}
