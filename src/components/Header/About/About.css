@@ -20,3 +20,12 @@ section{
 .about-image img{
     width: 100%;
 }
+
+@media screen and (max-width:688px) {
+    .about-container{
+        flex-direction: column;
+    }
+    .about-details{
+        margin-left: 20px;
+    }
+}
