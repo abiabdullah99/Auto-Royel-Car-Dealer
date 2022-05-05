@@ -6,46 +6,47 @@
   margin: 30px auto;
 }
 .logo p {
-  color: #11dede;
-  letter-spacing: 1px;
+  color: #38AAA4;
+  letter-spacing: 2px;
   font-size: 30px;
   display: flex;
   align-items: center;
   gap: 10px;
+  font-weight: 600;
 }
 .active-link {
   text-decoration: none;
   font-size: 21px;
   transition: color ease-in-out 300ms;
-  color: #11dede;
+  color: #38AAA4;
   margin-right: 25px;
   font-weight: 500;
-  border-bottom: 2px solid #307b98;
+  border-bottom: 2px solid #38AAA4;
   transition: all 0.4s ease-in-out;
   letter-spacing: 1px;
   font-weight: 600;
 }
 .link {
-  color: #fff;
+  color: #151B23;
   text-decoration: none;
   font-size: 18px;
   margin-right: 25px;
   font-weight: 500;
-  border-bottom: 2px solid #403f3fd6;
+  border-bottom: 2px solid #959191d6;
   letter-spacing: 1px;
   font-weight: 600;
 }
 .singupBtn {
   color: #fff;
   font-size: 17px;
-  background-color: #11dede;
+  background-color: #38AAA4;
   padding: 10px 10px;
   border-radius: 30px;
   font-weight: 700;
 }
 .icon {
   font-size: 30px;
-  color: #11dede;
+  color: #38AAA4;
   margin-right: 30px;
 }
 /* Responsive Mobile Device  */

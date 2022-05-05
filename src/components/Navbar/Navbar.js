@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ImCross } from "react-icons/im";
 import { TiThMenuOutline } from "react-icons/ti";
-import { BsCameraReels } from "react-icons/bs";
+import { GiCarWheel } from "react-icons/gi";
+import './Navbar.css'
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -17,8 +18,8 @@ const Navbar = () => {
         </div>
         <div className="navbar">
           <div className="logo">
-            <p className="logo">
-              <BsCameraReels></BsCameraReels> Picturesque
+            <p className="logo font-mono">
+              <GiCarWheel></GiCarWheel> Auto Royel
             </p>
           </div>
           <div
