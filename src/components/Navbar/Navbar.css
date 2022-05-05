@@ -6,7 +6,7 @@
   margin: 30px auto;
 }
 .logo p {
-  color: #38AAA4;
+  color: #D80040;
   letter-spacing: 2px;
   font-size: 30px;
   display: flex;
@@ -18,10 +18,10 @@
   text-decoration: none;
   font-size: 21px;
   transition: color ease-in-out 300ms;
-  color: #38AAA4;
+  color: #D80040;
   margin-right: 25px;
   font-weight: 500;
-  border-bottom: 2px solid #38AAA4;
+  border-bottom: 2px solid #D80040;
   transition: all 0.4s ease-in-out;
   letter-spacing: 1px;
   font-weight: 600;
@@ -39,14 +39,14 @@
 .singupBtn {
   color: #fff;
   font-size: 17px;
-  background-color: #38AAA4;
+  background-color: #D80040;
   padding: 10px 10px;
   border-radius: 30px;
   font-weight: 700;
 }
 .icon {
   font-size: 30px;
-  color: #38AAA4;
+  color: #D80040;
   margin-right: 30px;
 }
 /* Responsive Mobile Device  */

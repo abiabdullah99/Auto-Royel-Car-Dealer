@@ -1,0 +1,36 @@
+.banner-container {
+  display: flex;
+  align-items: center;
+}
+.banner-details {
+  background-size: cover;
+  background-position: left;
+  height: 100%;
+  z-index: -1;
+  flex: 1;
+}
+span{
+    color: #D80040;
+}
+.silde {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  z-index: -1;
+}
+.banner-image img {
+  width: 100%;
+}
+.banner-image {
+  flex: 1;
+  margin-right: 50px;
+}
+.banner-btn{
+    margin-top: 10px;
+    padding: 15px 30px;
+    background: #D80040;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 30px;
+}
