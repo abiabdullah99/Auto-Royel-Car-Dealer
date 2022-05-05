@@ -1,0 +1,22 @@
+section{
+    background-color: #2C373D;
+}
+.about-container {
+  display: flex;
+  width: 90%;
+  margin: 0px auto;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+.about-details{
+    flex: 1;
+    margin-left: 100px;
+}
+.about-image{
+    flex: 1;
+    margin-right: 30px;
+}
+.about-image img{
+    width: 100%;
+}
