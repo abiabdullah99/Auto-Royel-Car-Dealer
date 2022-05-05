@@ -7,6 +7,7 @@ import Blogs from "./components/Blogs/Blogs";
 import Login from "./components/Login/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
 import SingUp from "./components/Login/SignUp/SingUp";
+import PrivateRoute from "./PrivateRoute";
 const App = () => {
   return (
     <div>
@@ -14,7 +15,14 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
-        <Route path="/product" element={<Product></Product>}></Route>
+        <Route
+          path="/product"
+          element={
+            <PrivateRoute>
+              <Product></Product>
+            </PrivateRoute>
+          }
+        ></Route>
         <Route path="/blog" element={<Blogs></Blogs>}></Route>
         <Route path="/Login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SingUp></SingUp>}></Route>
