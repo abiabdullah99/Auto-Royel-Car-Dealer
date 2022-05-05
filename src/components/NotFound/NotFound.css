@@ -1,0 +1,27 @@
+.erorr-info{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: 200px auto;
+    gap: 30px;
+}
+.erorr-info img{
+    width: 400px;
+}
+.error-details h1, p{
+    color: #FFF;
+}
+.error-details h1{
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+.error-details p{
+    font-size: 19px;
+}
+
+@media screen and (max-width:688px) {
+    .erorr-info{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+}
