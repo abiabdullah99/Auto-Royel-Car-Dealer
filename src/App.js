@@ -8,6 +8,8 @@ import Login from "./components/Login/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
 import SingUp from "./components/Login/SignUp/SingUp";
 import PrivateRoute from "./PrivateRoute";
+import NotFound from "./components/NotFound/NotFound";
+import Footer from "./components/Footer/Footer";
 const App = () => {
   return (
     <div>
@@ -26,7 +28,9 @@ const App = () => {
         ></Route>
         <Route path="/Login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SingUp></SingUp>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 };

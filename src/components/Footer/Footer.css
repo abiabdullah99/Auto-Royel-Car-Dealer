@@ -1,0 +1,111 @@
+.foot {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px auto;
+    margin-top: 130px;
+    padding: 20px;
+    padding-top: 50px;
+  }
+  .foot,
+  .foot-1,
+  .foot-2,
+  .foot-3 {
+    background: #D80040;
+  }
+  .foot-1 h6 {
+    font-size: 19px;
+    width: 100%;
+    margin-top: 20px;
+    line-height: 2;
+    color: #fff;
+    font-weight: 600;
+  }
+  .span {
+    color: #0a0f1e;
+    font-size: 20px;
+  }
+  .foot-1 {
+    width: 100%;
+    margin-left: 150px;
+  }
+  .foot-2 {
+    width: 100%;
+    padding-left: 130px;
+  }
+  .foot-2 h5 {
+    color: #fff;
+    font-size: 17px;
+  }
+  .foot-2 h3 {
+    font-size: 21px;
+    color: #fff;
+    padding: 3px 0px;
+    font-weight: 600;
+  }
+  .foot-2 input {
+    font-size: 15px;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 10px 150px 10px 10px;
+    background: #fff;
+    border-radius: 30px;
+    margin: 5px 0px;
+  }
+  .foot-2 button {
+    font-size: 16px;
+    padding: 12px 25px;
+    background: #0a0f1e;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    margin-top: 10px;
+  }
+  .foot-3 {
+    width: 100%;
+    padding-left: 150px;
+  }
+  .foot-3 h3 {
+    margin-left: 15px;
+    font-size: 21px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .foot-3 h6 {
+    color: #fff;
+    font-size: 16px;
+    margin-left: 15px;
+  }
+  .social-icons {
+    display: flex;
+  }
+  .social {
+    font-size: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 20px;
+    display: flex;
+  }
+  .foot .social:hover {
+    color: #fff;
+  }
+  @media only screen and (max-width: 688px) {
+    .foot {
+      flex-direction: column;
+    }
+    .foot-1 {
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+    .foot-2 {
+      padding-left: 0px;
+      margin-bottom: 20px;
+    }
+    .foot-3 {
+      padding-left: 0px;
+    }
+  }
+  
