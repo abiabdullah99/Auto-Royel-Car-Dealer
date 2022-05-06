@@ -1,0 +1,30 @@
+.products {
+  padding-top: 200px;
+}
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+.product-info {
+  width: 350px;
+  box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+.items-img img {
+  width: 350px;
+  height: 300px;
+  border-radius: 10px;
+}
+.update-btn{
+    color: #fff;
+    background: #D80040;
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

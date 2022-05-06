@@ -10,6 +10,7 @@ import SingUp from "./components/Login/SignUp/SingUp";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "./components/NotFound/NotFound";
 import Footer from "./components/Footer/Footer";
+import Products from "./components/Products/Products";
 const App = () => {
   return (
     <div>
@@ -28,6 +29,7 @@ const App = () => {
         ></Route>
         <Route path="/Login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SingUp></SingUp>}></Route>
+        <Route path="/product" element={<Products></Products>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
