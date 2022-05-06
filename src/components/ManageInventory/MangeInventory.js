@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
-import useProducts from "../../Hook/UseProducts";
-import "./Products.css";
-const Products = () => {
-  const [product] = useProducts();
+import React from 'react';
+import { Link } from 'react-router-dom';
+import useProducts from '../../Hook/UseProducts';
 
-  return (
-    <section className="products">
+const MangeInventory = () => {
+    const [product] = useProducts()
+    return (
+        <section className="products">
       <h2 className="text-white text-center text-2xl md:text-4xl font-semibold pb-20 font-mono">
         Latest Veh<span>icles</span> on Sale
       </h2>
       <div className="product-container">
-        {product.slice(0, 6).map((item) => (
+        {product.map((item) => (
           <div className="product-info relative" key={item._id}>
             <div className="items-img">
               <img src={item.img} alt="" />
@@ -33,16 +33,13 @@ const Products = () => {
               </p>
             </div>
             <Link to="/updatedetails">
-              <button className="absolute bottom-0 update-btn">Up Date</button>
+              <button className="absolute bottom-0 update-btn">Remove</button>
             </Link>
           </div>
         ))}
       </div>
-      <Link to="/manageItems">
-        <h1 className="manage-btn font-mono">Manage Inventory</h1>
-      </Link>
     </section>
-  );
+    );
 };
 
-export default Products;
+export default MangeInventory;
