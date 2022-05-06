@@ -1,11 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import useProducts from '../../Hook/UseProducts';
+import React from "react";
+import useProducts from "../../Hook/UseProducts";
 
 const MangeInventory = () => {
-    const [product] = useProducts()
-    return (
-        <section className="products">
+  const [product, setProduct] = useProducts();
+
+  const handleDeletProductItem = (id) => {
+    const proced = window.confirm("Are Your Sure Delete Items");
+    if (proced) {
+      const url = `http://localhost:5000/inventory/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          const reamingData = product.filter((product) => product._id !== id);
+          setProduct(reamingData);
+        });
+    }
+  };
+  return (
+    <section className="products">
       <h2 className="text-white text-center text-2xl md:text-4xl font-semibold pb-20 font-mono">
         Latest Veh<span>icles</span> on Sale
       </h2>
@@ -32,14 +46,17 @@ const MangeInventory = () => {
                 {item.description}
               </p>
             </div>
-            <Link to="/updatedetails">
-              <button className="absolute bottom-0 update-btn">Remove</button>
-            </Link>
+            <button
+              onClick={() => handleDeletProductItem(item._id)}
+              className="absolute bottom-0 update-btn"
+            >
+              Remove
+            </button>
           </div>
         ))}
       </div>
     </section>
-    );
+  );
 };
 
 export default MangeInventory;
