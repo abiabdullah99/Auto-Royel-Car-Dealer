@@ -44,3 +44,9 @@
     padding: 10px 30px;
     border-radius: 30px;
 }
+
+@media screen and (max-width:688px) {
+    .productsDetails{
+        flex-direction: column;
+    }
+}

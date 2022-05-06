@@ -28,7 +28,7 @@ const UpdateDetails = () => {
           <form>
               <input type="text" name="name" value={name} disabled required/>
               <input type="number" name="number" placeholder="Add Stock"  required/>
-              <button className="stock-btn text-mono">Stock</button>
+              <button className="stock-btn text-mono">Add Stock</button>
           </form>
       </div>
     </div>
