@@ -20,11 +20,30 @@
   height: 300px;
   border-radius: 10px;
 }
-.update-btn{
+.update-btn {
+  color: #fff;
+  background: #d80040;
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.manage-btn{
+    text-align: center;
     color: #fff;
-    background: #D80040;
-    width: 100%;
-    padding: 10px 0px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    background-color: #d80040;
+    padding: 18px 20px;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 20%;
+    margin: 80px auto;
+    border-radius: 30px;
+}
+@media screen and (max-width: 688px) {
+  .product-container {
+    grid-template-columns: 1fr;
+  }
 }
