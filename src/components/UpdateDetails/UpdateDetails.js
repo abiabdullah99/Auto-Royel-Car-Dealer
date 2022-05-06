@@ -18,11 +18,18 @@ const UpdateDetails = () => {
           <h1 className="text-2xl pb-1">Product Id: {_id}</h1>
           <h1 className="text-2xl pb-1">Product Name: {name}</h1>
           <h1 className="text-2xl pb-1">Product Price: {price}</h1>
-          <h1 className="text-2xl pb-1">Product Stok: {quantity}</h1>
+          <h1 className="text-2xl pb-1">Product Stock: {quantity}</h1>
           <h1 className="text-2xl pb-1">Product Supplier: {supplier}</h1>
           <h3 className="text-xl mb-8">{description}</h3>
         </div>
         <button className="deliver-btn">Delivered</button>
+      </div>
+      <div className="stock-items">
+          <form>
+              <input type="text" name="name" value={name} disabled required/>
+              <input type="number" name="number" placeholder="Add Stock"  required/>
+              <button className="stock-btn text-mono">Stock</button>
+          </form>
       </div>
     </div>
   );
