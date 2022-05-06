@@ -1,9 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useProducts from "../../Hook/UseProducts";
 import "./Products.css";
 const Products = () => {
   const [product] = useProducts();
+  
+  const navigate = useNavigate();
 
+  const navigateToServiceDetail = (id) => {
+    navigate(`/updatedetails/${id}`);
+  };
   return (
     <section className="products">
       <h2 className="text-white text-center text-2xl md:text-4xl font-semibold pb-20 font-mono">
@@ -32,9 +37,12 @@ const Products = () => {
                 {item.description}
               </p>
             </div>
-            <Link to="/updatedetails">
-              <button className="absolute bottom-0 update-btn">Up Date</button>
-            </Link>
+            <button
+              onClick={() => navigateToServiceDetail(item._id)}
+              className="absolute bottom-0 update-btn"
+            >
+              Up Date
+            </button>
           </div>
         ))}
       </div>

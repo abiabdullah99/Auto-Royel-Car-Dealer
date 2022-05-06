@@ -29,7 +29,7 @@ const App = () => {
           }
         ></Route>
         <Route
-          path="/updatedetails"
+          path="/updatedetails/:productId"
           element={
             <PrivateRoute>
               <UpdateDetails></UpdateDetails>
