@@ -1,0 +1,9 @@
+.form input{
+    border: 2px solid #D80040;
+    font-size: 18px;
+}
+.product-btn{
+    background-color: #D80040;
+    color: #fff;
+    padding: 5px 0px;
+}
