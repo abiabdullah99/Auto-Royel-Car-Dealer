@@ -16,7 +16,7 @@ const MyItems = () => {
   console.log(myItems);
   return (
     <section>
-      <h1 className="text-white text-center pt-10 text-3xl font-mono"> My Products: {myItems.length}</h1>
+      <h1 className="text-white text-center pt-10 text-5xl font-mono font-semibold"> My P<span>roducts</span>: {myItems.length}</h1>
       <div className="product-container">
         {myItems.map((items) => (
           <MyitemsShow key={items._id} items={items}></MyitemsShow>

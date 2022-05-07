@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ImCross } from "react-icons/im";
 import { TiThMenuOutline } from "react-icons/ti";
-import { GiCarWheel } from "react-icons/gi";
+import logo from '../../image/logo.png'
 import "./Navbar.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="navbar">
         <div className="logo">
           <p className="logo font-mono">
-            <GiCarWheel></GiCarWheel> Auto Royel
+            <img src={logo} alt="" />
           </p>
         </div>
         <div
@@ -39,22 +39,9 @@ const Navbar = () => {
 
           <NavLink
             className={({ isActive }) => (isActive ? "active-link" : "link")}
-            to="/about"
-          >
-            About
-          </NavLink>
-
-          <NavLink
-            className={({ isActive }) => (isActive ? "active-link" : "link")}
             to="/blog"
           >
             Blogs
-          </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? "active-link" : "link")}
-            to="/contact"
-          >
-            Contact
           </NavLink>
           {user ? (
             <NavLink

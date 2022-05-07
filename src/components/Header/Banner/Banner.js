@@ -17,7 +17,7 @@ const Banner = () => {
           <p className="text-white text-xl pl-10 md:pl-20 pb-4">
             Find the <span>Perfect Car</span> With Our Car Finder Tool
           </p>
-          <button className="ml-20 banner-btn">About</button>
+          <button className="ml-20 banner-btn">GO.</button>
         </div>
         <div className="banner-image">
           <img src={banner} alt="" />

@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-around;
   margin: 0px auto;
-  margin-top: 130px;
   padding: 20px;
   padding-top: 50px;
 }
@@ -12,7 +11,7 @@
 .foot-1,
 .foot-2,
 .foot-3 {
-  background: #d80040;
+  background: #F5C34B;
 }
 .foot-1 h6 {
   font-size: 19px;

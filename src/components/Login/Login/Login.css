@@ -1,6 +1,6 @@
 .form-title {
   text-align: center;
-  color: #D80040;;
+  color: #F5C34B;;
   margin-top: 20px;
   font-size: 29px;
   letter-spacing: 2px;
@@ -34,13 +34,13 @@
 }
 .form-btn {
   color: #fff;
-  background-color: #D80040;
+  background-color: #F5C34B;
   width: 50%;
   margin: 20px auto;
   padding: 10px 10px;
   font-size: 21px;
   letter-spacing: 1px;
-  border: 2px solid #D80040;
+  border: 2px solid #F5C34B;
   border-radius: 30px;
   font-weight: 600;
   transition: 0.3s linear;
@@ -50,24 +50,24 @@
   align-items: center;
   gap: 5px;
   color: #fff;
-  background-color: #D80040;
+  background-color: #F5C34B;
   width: 50%;
   margin: 20px auto;
   padding: 10px 10px;
   padding-left: 15px;
   font-size: 21px;
   letter-spacing: 1px;
-  border: 2px solid #D80040;
+  border: 2px solid #F5C34B;
   border-radius: 30px;
   font-weight: 600;
   transition: 0.3s linear;
 }
 .google {
-  background-color: #D80040;
+  background-color: #F5C34B;
 }
 .login-btn:hover {
   background-color: transparent;
-  color: #D80040;
+  color: #F5C34B;
 }
 .error {
   font-size: 16px;
@@ -82,8 +82,8 @@
   right: 10px;
 }
 .sent {
-  color: #D80040;
-  border: 2px solid #D80040;
+  color: #F5C34B;
+  border: 2px solid #F5C34B;
   width: 50%;
   padding: 5px 10px;
   margin: 10px auto;

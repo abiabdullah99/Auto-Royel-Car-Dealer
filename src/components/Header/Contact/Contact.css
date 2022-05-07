@@ -1,0 +1,30 @@
+.contact-container {
+  display: flex;
+  width: 80%;
+}
+.contact-logo img {
+  width: 90%;
+  margin-top: -90px;
+  margin-left: 120px;
+}
+.contact-box {
+  flex: 1;
+  margin-top: 50px;
+}
+.contact-logo {
+  flex: 2;
+}
+.contact-box input,
+textarea {
+  background-color: transparent;
+  border: 3px solid #f5c34b;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.contact-box input {
+  width: 100%;
+}
+.contact-box textarea {
+  width: 100%;
+}

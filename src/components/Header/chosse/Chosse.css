@@ -1,0 +1,22 @@
+.chosse-info{
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: 0px auto;
+    gap: 50px;
+    padding-bottom: 100px;
+}
+.icons-part{
+    color:#F5C34B;
+    font-size: 60px;
+}
+.chosse-info h1{
+    color: #F5C34B;
+    font-size: 20px;
+    font-weight: 600;
+}
+.chosse-info p{
+    color: #fff;
+    padding-bottom: 5px;
+    text-align: justify;
+}

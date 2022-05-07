@@ -6,14 +6,11 @@ const About = () => {
     <section>
       <div className="about-container">
         <div className="about-details font-mono">
-          <h1 className="text-7xl font-bold mb-4 text-white">
-            <span>About</span> Us
+          <h1 className="text-2xl font-bold mb-4 text-white">
+            <span>Best Luxury Cars</span>
           </h1>
-          <h1 className="text-white text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Consequuntur suscipit consectetur minima earum delectus assumenda
-            velit magni vitae deserunt iste adipisci doloribus, tenetur beatae
-            dignissimos vel, quis sequi sint libero.
+          <h1 className="text-white text-7xl font-semibold">
+            Modern <br /> <span>Incredible </span>2022
           </h1>
         </div>
         <div className="about-image">
