@@ -1,8 +1,11 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import './AddItems.css'
+import auth from "../../firebase.init";
+import "./AddItems.css";
 const AddItems = () => {
   const { register, handleSubmit } = useForm();
+  const [user] = useAuthState(auth);
   const onSubmit = (data) => {
     console.log(data);
     const url = `http://localhost:5000/inventory`;
@@ -18,7 +21,9 @@ const AddItems = () => {
   };
   return (
     <div className="text-center font-mono mt-20">
-      <h2 className="text-4xl font-semibold">Add New P<span>roducts</span></h2>
+      <h2 className="text-4xl font-semibold">
+        Add New P<span>roducts</span>
+      </h2>
       <form
         className="flex flex-col w-80 mx-auto mt-20 form"
         onSubmit={handleSubmit(onSubmit)}
@@ -33,6 +38,12 @@ const AddItems = () => {
           className="w-80 rounded  mb-5 py-2 px-10"
           placeholder="name"
           {...register("name", { required: true })}
+        />
+        <input
+          className="w-80 rounded  mb-5 py-2 px-10"
+          value={user.email}
+        
+          {...register("email", { required: true })}
         />
         <input
           className="w-80 rounded  mb-5 py-2 px-10"
@@ -56,7 +67,11 @@ const AddItems = () => {
           placeholder="description"
           {...register("description")}
         />
-        <input className="product-btn" type="Submit" value="Post Product" />
+        <input
+          className="product-btn rounded"
+          type="Submit"
+          value="Post Product"
+        />
       </form>
     </div>
   );

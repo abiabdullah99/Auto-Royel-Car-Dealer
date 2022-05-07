@@ -1,19 +1,8 @@
-.form input{
-    border: 2px solid #D80040;
-    font-size: 18px;
-}
-.product-btn{
-    background-color: #D80040;
-    color: #fff;
-    padding: 5px 0px;
-}
+import React from 'react';
 
-
-
-/* const [{ name, img, description, price, quantity, supplier }] = myItems;
-  return (
-    <section>
-      <div className="product-container">
+const MyitemsShow = ({items}) => {
+    const {name, img, description, price, quantity, supplier} = items
+    return (
         <div className="product-info mt-20">
           <div className="items-img">
             <img src={img} alt="" />
@@ -36,5 +25,7 @@
             </p>
           </div>
         </div>
-      </div>
-    </section> */
+    );
+};
+
+export default MyitemsShow;

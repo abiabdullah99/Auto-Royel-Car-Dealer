@@ -1,0 +1,20 @@
+.blogs-info {
+    width: 80%;
+    margin: 100px auto;
+}
+.blogs-info h1{
+    color: #D80040;
+    font-size: 23px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.blogs-info h2{
+    font-size: 20px;
+    color: #D80040;
+}
+.blogs-info p{
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 5px;
+}
