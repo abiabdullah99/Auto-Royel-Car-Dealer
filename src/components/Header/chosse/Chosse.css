@@ -20,3 +20,9 @@
     padding-bottom: 5px;
     text-align: justify;
 }
+
+@media screen and (max-width:688px) {
+    .chosse-info{
+        flex-direction: column;
+    }
+}

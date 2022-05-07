@@ -28,3 +28,16 @@ textarea {
 .contact-box textarea {
   width: 100%;
 }
+@media screen and (max-width:688px) {
+    .contact-logo img{
+        margin-top: 10px;
+        margin-left: 30px;
+        width: 100%;
+    }
+    .contact-box{
+        margin-left: auto;
+    }
+    .contact-container{
+        flex-direction: column;
+    }
+}

@@ -20,8 +20,8 @@ const AddItems = () => {
       .then((result) => console.log(result));
   };
   return (
-    <div className="text-center font-mono mt-20">
-      <h2 className="text-4xl font-semibold">
+    <div className="text-center font-mono mt-20 mb-10">
+      <h2 className="text-4xl font-semibold ">
         Add New P<span>roducts</span>
       </h2>
       <form
