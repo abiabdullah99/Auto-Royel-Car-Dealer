@@ -42,7 +42,6 @@ const AddItems = () => {
         <input
           className="w-80 rounded  mb-5 py-2 px-10"
           value={user.email}
-        
           {...register("email", { required: true })}
         />
         <input

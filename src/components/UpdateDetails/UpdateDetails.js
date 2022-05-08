@@ -1,10 +1,24 @@
+// import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import UseProductDetails from "../../Hook/UseProductDetails";
 import "./UpdateDetails.css";
 const UpdateDetails = () => {
-
   const { productId } = useParams();
   const [productDetails] = UseProductDetails(productId);
+  // const [stock, setStock] = useState([0]);
+  // useEffect(() => {
+  //   fetch(`http://localhost:5000/inventory/${productId}`, {
+  //     method: "PUT",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //     body: JSON.stringify({ stock }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setStock(data);
+  //     });
+  // }, []);
 
   const { name, img, _id, description, price, quantity, supplier } =
     productDetails;
@@ -22,9 +36,7 @@ const UpdateDetails = () => {
           <h1 className="text-2xl pb-1">Product Supplier: {supplier}</h1>
           <h3 className="text-xl mb-8">{description}</h3>
         </div>
-        <button className="deliver-btn">
-          Delivered
-        </button>
+        <button className="deliver-btn">Delivered</button>
       </div>
       <div className="stock-items">
         <form>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useProducts from "../../Hook/UseProducts";
 
 const MangeInventory = () => {
@@ -19,10 +20,11 @@ const MangeInventory = () => {
     }
   };
   return (
-    <section className="products">
+    <section className="products pb-20">
       <h2 className="text-white text-center text-2xl md:text-4xl font-semibold pb-20 font-mono">
         Latest Veh<span>icles</span> on Sale
       </h2>
+      
       <div className="product-container">
         {product.map((item) => (
           <div className="product-info relative" key={item._id}>
@@ -43,7 +45,7 @@ const MangeInventory = () => {
                 <span className="text-xl">Supplier:</span> {item.supplier}
               </p>
               <p className="text-white pb-2 text-sm text-justify px-5 mb-20">
-                {item.description}
+                <span>{item.description}</span>
               </p>
             </div>
             <button
@@ -55,6 +57,9 @@ const MangeInventory = () => {
           </div>
         ))}
       </div>
+      <Link to="/additems">
+        <h1 className="manage-btn font-mono">Add Items</h1>
+      </Link>
     </section>
   );
 };
