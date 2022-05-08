@@ -10,6 +10,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
 import { FcGoogle } from "react-icons/fc";
+import axios from "axios";
 
 const Login = () => {
   const [userInfo, setUserInfo] = useState({
@@ -74,9 +75,12 @@ const Login = () => {
 
   //   from Login
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    signInWithEmail(userInfo.email, userInfo.password);
+    const email = userInfo.email;
+    await signInWithEmail(email, userInfo.password);
+    const { data } = await axios.post("http://localhost:5000/login", { email });
+    localStorage.setItem("accessToken", data.accessToken);
   };
 
   //   Naviaget For login Location

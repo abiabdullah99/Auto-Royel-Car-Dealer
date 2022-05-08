@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import auth from "../../firebase.init";
 import "./AddItems.css";
 const AddItems = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const [user] = useAuthState(auth);
   const onSubmit = (data) => {
     console.log(data);
@@ -18,6 +18,7 @@ const AddItems = () => {
     })
       .then((res) => res.json())
       .then((result) => console.log(result));
+      reset()
   };
   return (
     <div className="text-center font-mono mt-20 mb-10">

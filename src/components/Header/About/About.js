@@ -9,7 +9,7 @@ const About = () => {
           <h1 className="text-2xl font-bold mb-4 text-white">
             <span>Best Luxury Cars</span>
           </h1>
-          <h1 className="text-white text-7xl font-semibold">
+          <h1 className="text-white text-3xl md:text-7xl font-semibold">
             Modern <br /> <span>Incredible </span>2022
           </h1>
         </div>

@@ -46,4 +46,11 @@
   .product-container {
     grid-template-columns: 1fr;
   }
+  .product-info{
+     width: 300px;
+     margin: 30px auto;
+  }
+  .items-img{
+    width: 300px;
+  }
 }
