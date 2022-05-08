@@ -24,7 +24,7 @@ const MangeInventory = () => {
       
       <div className="product-container">
         {product.map((item) => (
-          <div className="product-info relative" key={item._id}>
+          <div className="product-info relative" data-aos="zoom-out-left" data-aos-duration="2000" key={item._id}>
             <div className="items-img">
               <img src={item.img} alt="" />
             </div>

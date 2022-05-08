@@ -11,10 +11,10 @@ const Contact = () => {
         Let'<span>s Talk About</span> Everythink
       </p>
       <div className="contact-container">
-        <div className="contact-logo">
+        <div className="contact-logo" data-aos="fade-right" data-aos-duration="2000">
           <img src={logo} alt="" />
         </div>
-        <form className="contact-box font-mono">
+        <form className="contact-box font-mono" data-aos="fade-left" data-aos-duration="2000">
           <div className="from-group">
             <input type="text" id="name" placeholder="Enter Your Name" />
           </div>

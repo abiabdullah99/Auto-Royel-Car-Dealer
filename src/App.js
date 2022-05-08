@@ -13,21 +13,17 @@ import UpdateDetails from "./components/UpdateDetails/UpdateDetails";
 import AddItems from "./components/AddItems/AddItems";
 import MangeInventory from "./components/ManageInventory/MangeInventory";
 import MyItems from "./components/MyItems/MyItems";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const App = () => {
+  AOS.init();
   return (
     <div>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
-        <Route
-          path="/blog"
-          element={
-            <PrivateRoute>
-              <Blogs></Blogs>
-            </PrivateRoute>
-          }
-        ></Route>
+        <Route path="/blog" element={<Blogs></Blogs>}></Route>
         <Route
           path="/updatedetails/:productId"
           element={

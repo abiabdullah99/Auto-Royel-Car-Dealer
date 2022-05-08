@@ -19,7 +19,7 @@ const Banner = () => {
           </p>
           <button className="ml-20 banner-btn">GO.</button>
         </div>
-        <div className="banner-image">
+        <div className="banner-image" data-aos="fade-left" data-aos-duration="2000">
           <img src={banner} alt="" />
         </div>
       </div>

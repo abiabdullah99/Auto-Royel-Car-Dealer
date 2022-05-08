@@ -1,27 +1,29 @@
-// import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import UseProductDetails from "../../Hook/UseProductDetails";
 import "./UpdateDetails.css";
 const UpdateDetails = () => {
   const { productId } = useParams();
   const [productDetails] = UseProductDetails(productId);
-  // const [stock, setStock] = useState([0]);
-  // useEffect(() => {
-  //   fetch(`https://vast-ravine-95722.herokuapp.com/inventory/${productId}`, {
-  //     method: "PUT",
-  //     headers: {
-  //       "content-type": "application/json",
-  //     },
-  //     body: JSON.stringify({ stock }),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setStock(data);
-  //     });
-  // }, []);
-
   const { name, img, _id, description, price, quantity, supplier } =
     productDetails;
+
+    // const handleDeliver = (id, quantity) => {
+    //   const newStock = parseInt(quantity)-1;
+    //   const updateStock = {newStock};
+
+    //   fetch(`https://vast-ravine-95722.herokuapp.com/inventory/${id}`, {
+    //     method: 'PUT',
+    //     headers: {
+    //       'content-type': 'application/json',
+    //     },
+    //     body: JSON.stringify(updateStock)
+    //   })
+    //   .then(res => res.json())
+    //   .then(result => {
+    //     console.log(result)
+    //      alert('succesfull added')
+    //   })
+    // }
   return (
     <div className="productsDetails">
       <div className="productDetail-container">
