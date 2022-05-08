@@ -7,7 +7,7 @@ const UpdateDetails = () => {
   const [productDetails] = UseProductDetails(productId);
   // const [stock, setStock] = useState([0]);
   // useEffect(() => {
-  //   fetch(`http://localhost:5000/inventory/${productId}`, {
+  //   fetch(`https://vast-ravine-95722.herokuapp.com/inventory/${productId}`, {
   //     method: "PUT",
   //     headers: {
   //       "content-type": "application/json",

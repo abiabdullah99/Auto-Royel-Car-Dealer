@@ -8,7 +8,7 @@ const AddItems = () => {
   const [user] = useAuthState(auth);
   const onSubmit = (data) => {
     console.log(data);
-    const url = `http://localhost:5000/inventory`;
+    const url = `https://vast-ravine-95722.herokuapp.com/inventory`;
     fetch(url, {
       method: "POST",
       headers: {

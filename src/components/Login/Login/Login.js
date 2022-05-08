@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
 import { FcGoogle } from "react-icons/fc";
 import axios from "axios";
+import Spinner from "../../Header/Spinner/Spinner";
 
 const Login = () => {
   const [userInfo, setUserInfo] = useState({
@@ -28,7 +29,7 @@ const Login = () => {
 
   //   Sigin Email And Pass firebase Hook
 
-  const [signInWithEmail, user, , hookError] =
+  const [signInWithEmail, user, emailloading, hookError] =
     useSignInWithEmailAndPassword(auth);
 
   // Reset Password
@@ -36,7 +37,7 @@ const Login = () => {
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
   // Singing With Google
-  const [signInWithGoogle, googleUser, , googleerror] =
+  const [signInWithGoogle, googleUser, googleLoading, googleerror] =
     useSignInWithGoogle(auth);
 
   // Email Value Handle
@@ -79,7 +80,10 @@ const Login = () => {
     e.preventDefault();
     const email = userInfo.email;
     await signInWithEmail(email, userInfo.password);
-    const { data } = await axios.post("http://localhost:5000/login", { email });
+    const { data } = await axios.post(
+      "https://vast-ravine-95722.herokuapp.com/login",
+      { email }
+    );
     localStorage.setItem("accessToken", data.accessToken);
   };
 
@@ -114,6 +118,12 @@ const Login = () => {
     }
   }, [hookError, googleerror]);
 
+  if (emailloading) {
+    return <Spinner />;
+  }
+  if(googleLoading){
+    return <Spinner />
+  }
   // Reset Password Handle
 
   const restPassword = async () => {

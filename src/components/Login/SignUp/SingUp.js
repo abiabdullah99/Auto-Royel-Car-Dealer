@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Spinner from "../../Header/Spinner/Spinner";
 
 
 const SingUp = () => {
@@ -27,7 +28,7 @@ const SingUp = () => {
 
 //   Create Email And password User && E-mail Verify----
 
-  const [createUserWithEmailAndPassword, user, , hookError] =
+  const [createUserWithEmailAndPassword, user, emailloading, hookError] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
 //  email Value Handle 
@@ -113,6 +114,10 @@ const SingUp = () => {
       navigate(from);
     }
   }, [user]);
+
+  if (emailloading) {
+    return <Spinner />;
+  }
 
   return (
     <div>

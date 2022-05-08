@@ -1,14 +1,11 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import useProducts from "../../Hook/UseProducts";
-
 const MangeInventory = () => {
   const [product, setProduct] = useProducts();
-
   const handleDeletProductItem = (id) => {
     const proced = window.confirm("Are Your Sure Delete Items");
     if (proced) {
-      const url = `http://localhost:5000/inventory/${id}`;
+      const url = `https://vast-ravine-95722.herokuapp.com/inventory/${id}`;
       fetch(url, {
         method: "DELETE",
       })

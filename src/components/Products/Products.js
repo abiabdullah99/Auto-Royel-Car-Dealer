@@ -3,17 +3,18 @@ import useProducts from "../../Hook/UseProducts";
 import "./Products.css";
 const Products = () => {
   const [product] = useProducts();
-  
   const navigate = useNavigate();
 
   const navigateToServiceDetail = (id) => {
     navigate(`/updatedetails/${id}`);
   };
+
   return (
     <section className="products pb-20">
       <h2 className="text-white text-center text-2xl md:text-4xl font-semibold pb-20 font-mono">
         <span>Latest Vehicles </span>on Sale
       </h2>
+
       <div className="product-container">
         {product.slice(0, 6).map((item) => (
           <div className="product-info relative" key={item._id}>

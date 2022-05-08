@@ -11,7 +11,7 @@ const MyItems = () => {
   const handleDeletProductItem = (id) => {
     const proced = window.confirm("Are Your Sure Delete Items");
     if (proced) {
-      const url = `http://localhost:5000/inventory/${id}`;
+      const url = `https://vast-ravine-95722.herokuapp.com/inventory/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -25,7 +25,7 @@ const MyItems = () => {
 
   useEffect(() => {
     const email = user.email;
-    const url = `http://localhost:5000/myItems?email=${email}`;
+    const url = `https://vast-ravine-95722.herokuapp.com/myItems?email=${email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMyItems(data));
