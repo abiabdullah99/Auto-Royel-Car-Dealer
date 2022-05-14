@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import useProducts from "../../Hook/UseProducts";
 const MangeInventory = () => {
+
+  
   const [product, setProduct] = useProducts();
   const handleDeletProductItem = (id) => {
     const proced = window.confirm("Are Your Sure Delete Items");

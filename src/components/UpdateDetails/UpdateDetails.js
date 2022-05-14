@@ -1,51 +1,118 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import UseProductDetails from "../../Hook/UseProductDetails";
 import "./UpdateDetails.css";
 const UpdateDetails = () => {
   const { productId } = useParams();
-  const [productDetails] = UseProductDetails(productId);
-  const { name, img, _id, description, price, quantity, supplier } =
-    productDetails;
+  const [newData, setNewData] = useState(false);
+  const [stockNumber, setStockNumber] = useState({
+    stock: "",
+  });
+  const [productDetails, setProductDetails] = useState([]);
+  useEffect(() => {
+    const url = `https://vast-ravine-95722.herokuapp.com/inventory/${productId}`;
 
-    // const handleDeliver = (id, quantity) => {
-    //   const newStock = parseInt(quantity)-1;
-    //   const updateStock = {newStock};
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setProductDetails(data));
+  }, [productId, newData]);
 
-    //   fetch(`https://vast-ravine-95722.herokuapp.com/inventory/${id}`, {
-    //     method: 'PUT',
-    //     headers: {
-    //       'content-type': 'application/json',
-    //     },
-    //     body: JSON.stringify(updateStock)
-    //   })
-    //   .then(res => res.json())
-    //   .then(result => {
-    //     console.log(result)
-    //      alert('succesfull added')
-    //   })
-    // }
+  // update quantity
+
+  const handleDelivered = async (id, quantity) => {
+    const getQuantity = parseInt(quantity) - 1;
+    const newQuantity = {
+      quantity: getQuantity.toString(),
+    };
+    const url = `https://vast-ravine-95722.herokuapp.com/inventory/${id}`;
+    await axios.put(url, newQuantity).then((response) => {
+      const { data } = response;
+      if (data) {
+        setNewData(!newData);
+      }
+    });
+    console.log(newQuantity);
+  };
+
+  let name, value;
+  const getUserData = (e) => {
+    e.preventDefault();
+    name = e.target.name;
+    value = e.target.value;
+    setStockNumber({ ...stockNumber, [name]: value });
+  };
+
+  const handleUpdate = async (id, quantity) => {
+    const { stock } = stockNumber;
+    console.log(stock);
+    const getQuantity = parseInt(quantity) + parseInt(stock);
+
+    const newQuantity = {
+      quantity: getQuantity.toString(),
+    };
+    console.log(newQuantity);
+
+    // send data to the monogod server and update
+    const url = `https://vast-ravine-95722.herokuapp.com/inventory/${id}`;
+    await axios.put(url, newQuantity).then((response) => {
+      const { data } = response;
+      if (data) {
+        setNewData(!newData);
+      }
+    });
+  };
   return (
     <div className="productsDetails">
       <div className="productDetail-container">
         <div className="productDetails-img">
-          <img src={img} alt="" />
+          <img src={productDetails.img} alt="" />
         </div>
         <div className="productDetail-info font-mono mt-10 ml-10">
-          <h1 className="text-2xl pb-1">Product Id: {_id}</h1>
-          <h1 className="text-2xl pb-1">Product Name: {name}</h1>
-          <h1 className="text-2xl pb-1">Product Price: {price}</h1>
-          <h1 className="text-2xl pb-1">Product Stock: {quantity}</h1>
-          <h1 className="text-2xl pb-1">Product Supplier: {supplier}</h1>
-          <h3 className="text-xl mb-8">{description}</h3>
+          <h1 className="text-2xl pb-1">Product Id: {productDetails._id}</h1>
+          <h1 className="text-2xl pb-1">Product Name: {productDetails.name}</h1>
+          <h1 className="text-2xl pb-1">
+            Product Price: {productDetails.price}
+          </h1>
+          <h1 className="text-2xl pb-1">
+            Product Stock: {productDetails.quantity}
+          </h1>
+          <h1 className="text-2xl pb-1">
+            Product Supplier: {productDetails.supplier}
+          </h1>
+          <h3 className="text-xl mb-8">{productDetails.description}</h3>
         </div>
-        <button className="deliver-btn">Delivered</button>
+        <button
+          onClick={() =>
+            handleDelivered(productDetails._id, productDetails.quantity)
+          }
+          className="deliver-btn"
+        >
+          Delivered
+        </button>
       </div>
       <div className="stock-items">
-        <form>
-          <input type="text" name="name" value={name} disabled required />
-          <input type="number" name="number" placeholder="Add Stock" required />
-          <button className="stock-btn text-mono">Add Stock</button>
-        </form>
+        <input
+          type="text"
+          name="name"
+          value={productDetails.name}
+          disabled
+          required
+        />
+        <input
+          type="text"
+          name="stock"
+          onChange={getUserData}
+          placeholder="Add Stock"
+          required
+        />
+        <button
+          onClick={() =>
+            handleUpdate(productDetails._id, productDetails.quantity)
+          }
+          className="stock-btn text-mono"
+        >
+          Add Stock
+        </button>
       </div>
     </div>
   );

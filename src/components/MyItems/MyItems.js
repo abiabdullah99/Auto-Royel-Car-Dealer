@@ -35,7 +35,6 @@ const MyItems = () => {
   return (
     <section>
       <h1 className="text-white text-center pt-10 text-5xl font-mono font-semibold">
-        {" "}
         My Pro<span>ducts</span>: {myItems.length}
       </h1>
       <div className="product-container">
